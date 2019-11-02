@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    Hamburger
+  </title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <script>
+    $("body").css("background-image", "url(img/alpine.jpg)");
+    $("body").css("background-repeat", "non-repeat");
+
+    var header = $("<div></div>");
+    $("body").append(header);
+
+    $("body").css("height", "100vh");
+
+
+    $(header).prepend("Commander View");
+    $(header).css("color", "white");
+    $(header).css("position", "sticky");
+    $(header).css("top", "0vh");
+
+    $(header).css("font-size", "3vh");
+    $(header).css("text-align", "center");
+    
+    $(header).css("background-image", "url('img/cadpat001.jpg')");
+    //      $(header).css("background","green");
+    $(header).css("height", "15vh").css("height","+=1.35%");
+    $(header).css("width", "100vw");
+    $(header).css("display", "inline-block");
+    $(header).css("padding", "0vh");
+
+    var cmd = $("<img/>");
+    $(cmd).attr("src", "img/cmd.png");
+    $(cmd).attr("id", "radio");
+    $(header).append(cmd);
+    
+    //the button with a radio drawing in it.
+    $(cmd).css("width", "10%");
+    $(cmd).css("height", "100%");
+    $(cmd).css("background-color", "white");
+    $(cmd).css("float", "left");
+
+    var headerPic = $("<div></div>");
+    $(header).append(headerPic);
+    $(headerPic).css("display", "inline-flex");
+    $(headerPic).css("margin-top", "0%");
+    $(headerPic).css("width", "100vw").css("width","-=10%");
+
+
+
+    //put squad A into a box
+    var squadElementA = $("<div></div>");
+    $(headerPic).append(squadElementA);
+
+    var squadA = $("<img/>");
+    $(squadElementA).append(squadA);
+    $(squadA).attr("src", "img/squadA.png");
+    $(squadA).css("height", "10vh");
+    $(squadA).css("color", "green");
+
+    //      var tagA = $("<canvas></canvas>");
+    //      $(squadElementA).append(tagA);
+    //      $(tagA).attr("id","tagA");
+    //      $(tagA).css("position","relative");
+    //      $(tagA).css("left","-5vw");
+    //      $(tagA).css("top","10vh");
+    //
+    //      var c = document.getElementById("tagA");
+    //      var ctx = c.getContext("2d");
+    //
+    //      var textA = $("<canvas></canvas>")
+    //      $(tagA).append(textA);
+    //      $(tagA).attr("id","textA");
+    //
+    //
+    //
+    //
+    //
+    //      // Create gradient
+    //      var grd = ctx.createRadialGradient(75, 50, 5, 90, 60, 100);
+    //      grd.addColorStop(0, "orange");
+    //      grd.addColorStop(1, "white");
+    //      // Fill with gradient
+    //      ctx.fillStyle = grd;
+    //      ctx.fillRect(20, 10, 40, 40);
+    //
+    //      var d = document.getElementById("textA");
+    //      var text = d.getContext("2d");
+    //      text.font = "30px Arial";
+    //      text.strokeText("A", 10, 50);
+
+
+
+
+    //put suqad B into a box
+    var squadElementB = $("<div></div>");
+    $(headerPic).append(squadElementB);
+
+    var squadB = $("<img/>");
+    $(squadElementB).append(squadB);
+    $(squadB).attr("src", "img/squadB.png");
+    $(squadB).css("height", "10vh");
+
+
+    //put suqad C into a box
+    var squadElementC = $("<div></div>");
+    $(headerPic).append(squadElementC);
+
+    var squadC = $("<img/>");
+    $(squadElementC).append(squadC);
+    $(squadC).attr("src", "img/squadC.png");
+    $(squadC).css("height", "10vh");
+
+    var toggle = $("<div></div>");
+    $("body").append(toggle);
+    $(toggle).css("position", "sticky");
+    $(toggle).css("width", "100vw");
+    $(toggle).css("height", "10vh");
+    $(toggle).css("top", "15vh");
+    $(toggle).css("color", "black");
+    $(toggle).css("padding-top", "0vh");
+   
+    $(toggle).css("background-image", "url('img/canada.svg')");
+    $(toggle).css("background-position", "50% 10%");
+    $(toggle).css("background-height", "0px");
+    $(toggle).css("background-size", "10vw");
+    $(toggle).css("background-repeat", "no-repeat");
+
+
+
+    var left = $("<span>TASK ASSIGN</span>");
+    $(toggle).append(left);
+
+
+    var right = $("<span>Map View</span>");
+    $(toggle).append(right);
+
+    $(right).css("float", "right");
+    $(right).css("margin-left", "10vw");
+    $(toggle).css("font-size", "3vh");
+
+
+
+
+
+
+    var radioDropDownDiv = $("<div></div>");
+    $("body").append(radioDropDownDiv);
+
+    var radioDropDown = $("<ol></ol>");
+    $(radioDropDownDiv).append(radioDropDown);
+    $(radioDropDownDiv).addClass("whiteFonts");
+    
+
+    $(".whiteFonts").css("color","white");
+    $(radioDropDownDiv).css("margin", "0px");
+    $(radioDropDownDiv).css("position", "relative");
+    $(radioDropDownDiv).css("id", "radioDropDownDiv");
+    
+    $(radioDropDownDiv).css("top", "5vh").css("top","+=1px");
+    $(radioDropDownDiv).css("font-size", "20pt");
+    //      $(radioDropDown).css("margin-top","400px");
+    
+    
+    var li1 = $("<li>Overall</li>");
+    $(li1).css("background", "blue");
+    var li2 = $("<li>squadA</li>");
+    $(li2).css("background", "green");
+    var li3 = $("<li>squadB</li>");
+    $(li3).css("background", "yellow");
+    var li4 = $("<li>squadC</li>");
+    $(li4).css("background", "red");
+    $(radioDropDown).append(li1);
+    $(radioDropDown).append(li2);
+    $(radioDropDown).append(li3);
+    $(radioDropDown).append(li4);
+
+    $(radioDropDownDiv).hide();
+    
+    var mapView = $("<iframe width='100%' height='80%' frameborder='0' style='border:0' src='https://www.google.com/maps/embed/v1/place?key=AIzaSyCoBmMoTzGkWkg5QLW5fWaLxLV5jwO5e-0&q=Space+Needle,Seattle+WA' allowfullscreen></iframe>");
+    
+    
+
+  </script>
+
+  <script>
+    $(document).ready(function () { $("#radio").click(function () { $(radioDropDownDiv).slideToggle(10) }) });
+
+    $(document).ready(function () {
+      $(left).mouseover(function () { $(left).css("background-color", "yellow") }).mouseout(function () { $(left).css("background-color", "blue") });
+
+      $(right).mouseover(function () { $(right).css("background-color", "yellow") }).mouseout(function () { $(right).css("background-color", "blue") });
+    });
+
+    $(document).ready(function () {
+      $(squadElementA).mouseover(function () { $(squadElementA).css("filter", "saturate(111)") }).mouseout(function () { $(squadElementA).css("filter", "saturate(0)") });
+
+      $(squadElementB).mouseover(function () { $(squadElementB).css("filter", "saturate(111)") }).mouseout(function () { $(squadElementB).css("filter", "saturate(0)") });
+
+      $(squadElementC).mouseover(function () { $(squadElementC).css("filter", "saturate(111)") }).mouseout(function () { $(squadElementC).css("filter", "saturate(0)") });
+    });
+
+    $(document).ready(function () {
+
+      function soldierLists(number, name) {
+
+        var soldierList = $("<div></div>")
+        $(soldierList).css("margin-top", "1vh");
+
+        var soldierNum = $("<span></span>");
+        $(soldierList).append(soldierNum);
+
+
+
+        var soldierPic = $("<img/>");
+        $(soldierList).append(soldierPic);
+        var soldierName = $("<span></span>");
+        $(soldierList).append(soldierName);
+
+        $(soldierNum).html(number);
+        $(soldierName).html(name);
+        $(soldierNum).css("font-size", "10vw");
+        $(soldierName).css("font-size", "5vw");
+        $(soldierPic).attr("src", "img/cdnSoldier.jpeg");
+        $(soldierPic).css("width", "15vw")
+        $(soldierPic).css("height", "11vh")
+
+        return soldierList;
+      }
+      
+      
+      function soldierListsF(number, name) {
+
+        var soldierList = $("<div></div>")
+        $(soldierList).css("margin-top", "1vh");
+
+        var soldierNum = $("<span></span>");
+        $(soldierList).append(soldierNum);
+
+
+
+        var soldierPic = $("<img/>");
+        $(soldierList).append(soldierPic);
+        var soldierName = $("<span></span>");
+        $(soldierList).append(soldierName);
+
+        $(soldierNum).html(number);
+        $(soldierName).html(name);
+        $(soldierNum).css("font-size", "10vw");
+        $(soldierName).css("font-size", "5vw");
+        $(soldierPic).attr("src", "img/cdnSoldier2.jpg");
+        $(soldierPic).css("width", "15vw")
+        $(soldierPic).css("height", "11vh")
+
+        return soldierList;
+      }
+      
+      
+      
+      var soldierListDivs = $("<div></div>");
+      var soldierListDiv = $("<div></div>");
+      $(soldierListDivs).append(soldierListDiv);
+      $(soldierListDivs).append(soldierListDivB);
+      var soldierListDivB = $("<div></div>")
+      var soldierListDivC = $("<div></div>")
+
+      $(soldierListDivs).css({ "position": "relative", "top": "5vh","margin-top":"3vh" });
+      $(soldierListDivs).css("display", "inline-flex");
+      $(soldierListDiv).css("width", "33vw");
+      $(soldierListDivB).css("width", "33vw");
+      $(soldierListDivC).css("width", "33vw");
+
+
+
+      var nameListM = ["Kyle", "Sirinam", "Boming", "Yang", "Johnny", "Vincent", "Anthony", "Jonny", "Judao", "Sam","max"];
+      var nameListF = ["Saemy", "Susan", "Sue", "Laura", "Cyra"];
+      
+      //squad1
+      var i;
+      for (i = 0; i < 5; i++) {
+        var soldier = soldierLists(i, nameListM[i]);
+        $(soldierListDiv).append(soldier);
+      }
+      $(soldierListDivs).append(soldierListDiv);
+      $("body").append(soldierListDivs);
+      $(squadElementA).click(function () {
+        $(soldierListDiv).slideToggle();
+        $(soldierListDivs).show();
+        
+      })
+      //squad2
+      var j;
+      for (j = 5; j < 11; j++) {
+        var soldier = soldierLists(j, nameListM[j]);
+        $(soldierListDivB).append(soldier);
+      }
+      $(soldierListDivs).append(soldierListDivB);
+
+
+      $(squadElementB).click(function () {
+        $(soldierListDivB).slideToggle();
+        $(soldierListDivs).show();
+      })
+      
+      //squad3
+       for (k = 1; k < 5; k++) {
+        var soldier = soldierListsF(k, nameListF[k]);
+        $(soldierListDivC).append(soldier);
+      }
+      $(soldierListDivs).append(soldierListDivC);
+
+
+      $(squadElementC).click(function () {
+        $(soldierListDivC).slideToggle();
+        $(soldierListDivs).show();
+      })
+      
+      $(soldierListDivs).before(mapView);
+      $(mapView).hide();
+      
+      $(document).ready(function () { $(left).click(function () { $(mapView).hide();
+                                                                  $(soldierListDivs).show();}) });
+      
+      $(document).ready(function () { $(right).click(function () { $(mapView).show();
+                                                                  $(soldierListDivs).hide();}) });
+    });
+
+
+
+  </script>
+
+</body>
+
+
+</html>
